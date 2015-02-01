@@ -185,22 +185,22 @@ $misc = $data->Misc();
 
 **Outputs**
 
-	- Rows:
-		- QuickTimeSupport
-		- JavaEnabled
-		- JavascriptDisabled
-		- PDFSupport
-		- WindowsMediaPlayerSupport
-		- AddToFavourites
-		- RealPlayerSupport
-		- TotalMisc
-		- DirectorSupport
-		- FlashSupport
-	- Columns:
-		- Misc ID
-		- Pages
-		- Hits
-		- Bandwidth
+  - Rows:
+	- QuickTimeSupport
+	- JavaEnabled
+	- JavascriptDisabled
+	- PDFSupport
+	- WindowsMediaPlayerSupport
+	- AddToFavourites
+	- RealPlayerSupport
+	- TotalMisc
+	- DirectorSupport
+	- FlashSupport
+  - Columns:
+	- Misc ID
+	- Pages
+	- Hits
+	- Bandwidth
 
 ###Time
 
