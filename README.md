@@ -283,7 +283,7 @@ $robot = $data->Robot();
 **Outputs**
 
   - Rows:
-	-Robot ID
+	- Robot ID
   - Columns:
 	 - Hits
 	 - Bandwidth
