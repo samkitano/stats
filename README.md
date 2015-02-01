@@ -186,7 +186,6 @@ $misc = $data->Misc();
 **Outputs**
 
 	- Rows:
-
 		- QuickTimeSupport
 		- JavaEnabled
 		- JavascriptDisabled
@@ -197,9 +196,7 @@ $misc = $data->Misc();
 		- TotalMisc
 		- DirectorSupport
 		- FlashSupport
-
 	- Columns:
-
 		- Misc ID
 		- Pages
 		- Hits
@@ -215,11 +212,8 @@ $time = $data->Time();
 **Outputs**
 
 	- Rows:
-
 		- Hour = 0 to 23
-
 	- Columns:
-
 		- Pages
 		- Hits
 		- Bandwidth
@@ -238,11 +232,8 @@ $domain = $data->Domain();
 **Outputs**
 
 	- Rows:
-
 		- Domain (up to 25 top visitor domains)
-
 	- Columns:
-
 		- Pages
 		- Hits
 		- Bandwidth
@@ -259,11 +250,8 @@ $cluster = $data->Cluster();
 **Outputs**
 
 	- Rows:
-
 		- Cluster ID
-
 	- Columns:
-
 		- Pages
 		- Hits
 		- Bandwidth
@@ -278,11 +266,8 @@ $login = $data->Login();
 **Outputs**
 
 	- Rows:
-
 			- Login
-
 	- Columns:
-
 		- Pages
 		- Hits
 		- Bandwidth
@@ -298,11 +283,8 @@ $robot = $data->Robot();
 **Outputs**
 
 	- Rows:
-
 		-Robot ID
-
 	- Columns:
-
 		 - Hits
 		 - Bandwidth
 		 - Last visit
@@ -318,11 +300,8 @@ $worm = $data->Worm();
 **Outputs**
 
 	- Rows:
-
 		- Worm ID
-
 	- Columns:
-
 		- Hits
 		- Bandwidth
 		- Last visit
@@ -338,11 +317,8 @@ $emailsender = $data->Emailsender();
 **Outputs**
 
 	- Rows:
-
 		- EMail
-
 	- Columns:
-
 		- Hits
 		- Bandwidth
 		- Last visit
@@ -358,11 +334,8 @@ $emailreceiver = $data->Emailreceiver();
 **Outputs**
 
 	- Rows:
-
 		- EMail
-
 	- Columns:
-
 		- Hits
 		- Bandwidth
 		- Last visit
@@ -377,11 +350,8 @@ $file_types = $data->Filetype();
 **Outputs**
 
 	- Rows:
-
 		- Files type
-
 	- Columns:
-
 		- Hits
 		- Bandwidth
 		- Bandwidth without compression
@@ -398,11 +368,8 @@ $downloads = $data->Download();
 **Outputs**
 
 	- Rows:
-
 		- Downloads
-
 	- Columns:
-
 		- Hits
 		- Bandwidth
 
@@ -416,11 +383,8 @@ $os = $data->Os();
 **Outputs**
 
 	- Rows:
-
 		- OS ID
-
 	- Columns:
-
 		- Hits
 		- [Icon] OS logo
 
@@ -434,11 +398,8 @@ $browsers = $data->Browser();
 **Outputs**
 
 	- Rows:
-
 		- Browser ID
-
 	- Columns:
-
 		- Hits
 		- Pages
 		- [Icon] Browser logo
@@ -454,11 +415,8 @@ $screensize = $data->ScreenSize();
 **Outputs**
 
 	- Rows:
-
 		- Screen size
-
 	- Columns:
-
 		- Hits
 
 ###Unknown Referer Os
@@ -471,11 +429,8 @@ $unknown_referer = $data->UnknownReferer();
 **Outputs**
 
 	- Rows:
-
 		- Unknown referer OS
-
 	- Columns:
-
 		- Last visit date
 
 ###Unknown Referer Browser
@@ -488,11 +443,8 @@ $unknown_referer_browser = $data->UnknownRefererBrowser();
 **Outputs**
 
 	- Rows:
-
 		- Unknown referer Browser
-
 	- Columns:
-
 		- Last visit date
 
 ###Origin
@@ -505,7 +457,6 @@ $origin = $data->Origin();
 **Outputs**
 
 	- Rows:
-
 		- Origin
 			- From0 = Direct access / Bookmark / Link in email...
 			- From1 = Unknown Origin
@@ -513,9 +464,7 @@ $origin = $data->Origin();
 			- From3 = Links from an external page (other web sites except search engines)
 			- From4 = Links from an internal page (other page on same site)
 			- From5 = Links from a NewsGroup
-
 	- Columns:
-
 		- Pages
 		- Hits
 
@@ -529,11 +478,8 @@ $sereferrals = $data->Sereferrals();
 **Outputs**
 
 	- Rows:
-
 		- Search engine referers ID
-
 	- Columns:
-
 		- Pages
 		- Hits
 
@@ -547,11 +493,8 @@ $external_page_referers = $data->Pagerefs();
 **Outputs**
 
 	- Rows:
-
 		- External page referers
-
 	- Columns:
-
 		- Pages
 		- Hits
 
@@ -565,11 +508,8 @@ $search_keyphrases = $data->Searchwords();
 **Outputs**
 
 	- Rows:
-
 		- Search keyphrases
-
 	- Columns:
-
 		- Number of search
 
 ###Search Keywords
@@ -582,11 +522,8 @@ $search_keywords = $data->Keywords();
 **Outputs**
 
 	- Rows:
-
 		- Search keywords
-
 	- Columns:
-
 		- Number of search
 
 ###Errors
@@ -599,11 +536,8 @@ $errors = $data->Errors();
 **Outputs**
 
 	- Rows:
-
 		- Errors (HTTP code)
-
 	- Columns:
-
 		- Hits
 		- Bandwidth
 
@@ -617,11 +551,8 @@ $page_not_found_errors = $data->Sider404();
 **Outputs**
 
 	- Rows:
-
 		- URL with 404 errors
-
 	- Columns:
-
 		- Hits
 		- Last URL referer
 
@@ -635,11 +566,8 @@ $visitors = $data->Visitor();
 **Outputs**
 
 	- Rows:
-
 		- Host
-
 	- Columns:
-
 		- Pages
 		- Hits
 		- Bandwidth
@@ -657,11 +585,8 @@ $days = $data->Day();
 **Outputs**
 
 	- Rows:
-
 		- Date
-
 	- Columns:
-
 		- Pages
 		- Hits
 		- Bandwidth
@@ -677,11 +602,8 @@ $sessions = $data->Session();
 **Outputs**
 
 	- Rows:
-
 		- Session range
-
 	- Columns:
-
 		- Number of visits
 
 ###Sider (Internal links)
@@ -694,11 +616,8 @@ $internal_links = $data->Sider();
 **Outputs**
 
 	- Rows:
-
 		- URL
-
 	- Columns:
-
 		- Pages
 		- Bandwidth
 		- Entry
@@ -714,11 +633,8 @@ $best_day = $data->Bestday();
 **Outputs**
 
 	- Rows:
-
 		- Date
-
 	- Columns:
-
 		- Hits
 
 #License
