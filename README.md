@@ -211,16 +211,16 @@ $time = $data->Time();
 
 **Outputs**
 
-	- Rows:
-		- Hour = 0 to 23
-	- Columns:
-		- Pages
-		- Hits
-		- Bandwidth
-		- Not viewed Pages
-		- Not viewed Hits
-		- Not viewed Bandwidth
-		- [Icon] Clock representing time period
+  - Rows:
+	- Hour = 0 to 23
+  - Columns:
+	- Pages
+	- Hits
+	- Bandwidth
+	- Not viewed Pages
+	- Not viewed Hits
+	- Not viewed Bandwidth
+	- [Icon] Clock representing time period
 
 ###Domain
 
