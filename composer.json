@@ -1,0 +1,26 @@
+{
+    "name": "samkitano/stats",
+    "description": "AWstats Parser for Laravel",
+    "keywords": ["laravel", "awestats"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sam Kitano",
+            "email": "sam.kitano@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations",
+            "src/Countries"
+        ],
+        "psr-0": {
+            "Samkitano\\Stats\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
