@@ -1,7 +1,7 @@
 {
     "name": "samkitano/stats",
     "description": "AWstats Parser for Laravel",
-    "keywords": ["laravel", "awestats"],
+    "keywords": ["laravel", "awstats"],
     "license": "MIT",
     "authors": [
         {
