@@ -14,10 +14,6 @@
         "illuminate/support": "4.2.*"
     },
     "autoload": {
-        "classmap": [
-            "src/migrations",
-            "src/Countries"
-        ],
         "psr-0": {
             "Samkitano\\Stats\\": "src/"
         }
