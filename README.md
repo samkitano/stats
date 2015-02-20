@@ -638,4 +638,4 @@ $best_day = $data->Bestday();
 	- Hits
 
 #License
-Open Source suftware under [MIT License](http://opensource.org/licenses/MIT)
+Open Source software under [MIT License](http://opensource.org/licenses/MIT)
