@@ -93,15 +93,15 @@ class Stats
 	 */
 	public function Read($file)
 	{
-		$this->awstats = new AWstats($this->aw_path . 'awstats' . $file. '.txt');
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 
 		return $this->awstats;
 	}
 
 	public function Current()
 	{
-		$m  = date('m');
-		$y   = date('Y');
+		$m = date('m');
+		$y = date('Y');
 		$d = $this->getCurrentHost();
 		$this->awstats = new AWstats($this->aw_path . 'awstats' .  $m . $y . '.' . $d . '.txt');
 		return $this->awstats;
@@ -136,10 +136,12 @@ class Stats
 	 * MonthHostsUnknown =
 	 *      - Number of hosts unknown
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function General()
+	public function General($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->General;
 	}
 
@@ -164,10 +166,12 @@ class Stats
 	 *      - DirectorSupport
 	 *      - FlashSupport
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Misc()
+	public function Misc($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Misc;
 	}
 
@@ -187,10 +191,12 @@ class Stats
 	 * Rows:
 	 *      - 0 to 23
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Time()
+	public function Time($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Time;
 	}
 
@@ -207,10 +213,12 @@ class Stats
 	 * Rows:
 	 *      - 25 top domains
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Domain()
+	public function Domain($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Domain;
 	}
 
@@ -226,10 +234,12 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Cluster()
+	public function Cluster($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Cluster;
 	}
 
@@ -246,10 +256,13 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Login()
+	public function Login($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Login;
 	}
 
@@ -266,10 +279,13 @@ class Stats
 	 * Rows:
 	 *      - Up to 25
 	 *
+	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Robot()
+	public function Robot($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Robot;
 	}
 
@@ -286,10 +302,12 @@ class Stats
 	 * Rows:
 	 *      -
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Worm()
+	public function Worm($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Worms;
 	}
 
@@ -305,10 +323,12 @@ class Stats
 	 * Rows:
 	 *      -
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Emailsender()
+	public function Emailsender($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Emailsender;
 	}
 
@@ -321,10 +341,13 @@ class Stats
 	 *
 	 * Rows:
 	 *      -
+	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Emailreceiver()
+	public function Emailreceiver($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Emailreceiver;
 	}
 
@@ -341,10 +364,13 @@ class Stats
 	 *
 	 * Rows:
 	 *      -
+	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Filetype()
+	public function Filetype($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Filetypes;
 	}
 
@@ -358,10 +384,12 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Download()
+	public function Download($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Downloads;
 	}
 
@@ -375,10 +403,12 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Os()
+	public function Os($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Os;
 	}
 
@@ -392,10 +422,12 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Browser()
+	public function Browser($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Browser;
 	}
 
@@ -409,10 +441,12 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function ScreenSize()
+	public function ScreenSize($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Screensize;
 	}
 
@@ -425,10 +459,12 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function UnknownReferer()
+	public function UnknownReferer($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->UnknownReferer;
 	}
 
@@ -441,10 +477,12 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function UnknownRefererBrowser()
+	public function UnknownRefererBrowser($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->UnknownRefererBrowser;
 	}
 
@@ -462,10 +500,13 @@ class Stats
 	 *      - From3 : Links from an external page (other web sites except search engines)
 	 *      - From4 : Links from an internal page (other page on same site)
 	 *      - From5 : Links from a NewsGroup
+	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Origin()
+	public function Origin($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Origin;
 	}
 
@@ -479,10 +520,12 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Sereferrals()
+	public function Sereferrals($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Sereferrals;
 	}
 
@@ -496,10 +539,12 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Pagerefs()
+	public function Pagerefs($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Pagerefs;
 	}
 
@@ -512,10 +557,12 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Searchwords()
+	public function Searchwords($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Searchwords;
 	}
 
@@ -528,10 +575,12 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Keywords()
+	public function Keywords($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Keywords;
 	}
 
@@ -545,10 +594,12 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Errors()
+	public function Errors($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Errors;
 	}
 
@@ -562,10 +613,12 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Sider404()
+	public function Sider404($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Sider404;
 	}
 
@@ -583,10 +636,12 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Visitor()
+	public function Visitor($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Visitor;
 	}
 
@@ -602,10 +657,12 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Day()
+	public function Day($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Day;
 	}
 
@@ -618,10 +675,12 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Session()
+	public function Session($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Session;
 	}
 
@@ -637,20 +696,24 @@ class Stats
 	 *
 	 * Rows:
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function Sider()
+	public function Sider($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->Sider;
 	}
 
 	/**
 	 * Returns best day (by hits)
 	 *
+	 * @param  string $file
 	 * @return mixed
 	 */
-	public function BestDay()
+	public function BestDay($file)
 	{
+		$this->awstats = new AWstats($this->aw_path .'/' . $file. '.txt');
 		return $this->awstats->BestDay;
 	}
 
@@ -765,7 +828,7 @@ class Stats
 	{
 
 		$Browsers =
-		[
+			[
 				'firefox'   => 'firefox',
 				'opera'     => 'opera',
 				'chrome'    => 'chrome',
@@ -944,466 +1007,466 @@ class Stats
 				'staroffice'                                                                    => 'staroffice',
 				'gnus'                                                                          => 'gnus',
 				'mozilla'                                                                       => 'mozilla'
-		];
-		
+			];
+
 		$mimes =
-		[
-			// Text file
-			'txt'   => 'text',
-			'log'   => 'text',
+			[
+				// Text file
+				'txt'   => 'text',
+				'log'   => 'text',
 
-			// HTML Static page
-			'chm'   => 'page',
-			'html'  => 'page',
-			'htm'   => 'page',
-			'mht'   => 'page',
-			'wml'   => 'page',
-			'wmlp'  => 'page',
-			'xhtml' => 'page',
-			'xml'   => 'page',
-			'vak'   => 'page',
-			'sgm'   => 'page',
-			'sgml'  => 'page',
+				// HTML Static page
+				'chm'   => 'page',
+				'html'  => 'page',
+				'htm'   => 'page',
+				'mht'   => 'page',
+				'wml'   => 'page',
+				'wmlp'  => 'page',
+				'xhtml' => 'page',
+				'xml'   => 'page',
+				'vak'   => 'page',
+				'sgm'   => 'page',
+				'sgml'  => 'page',
 
-			// HTML Dynamic pages or script
-			'asp'   => 'script',
-			'aspx'  => 'dotnet',
-			'ashx'  => 'dotnet',
-			'asmx'  => 'dotnet',
-			'axd'   => 'dotnet',
-			'cfm'   => 'script',
-			'class' => 'script',
-			'js'    => 'jscript',
-			'jsp'   => 'script',
-			'cgi'   => 'script',
-			'ksh'   => 'script',
-			'php'   => 'php',
-			'php3'  => 'php',
-			'php4'  => 'php',
-			'pl'    => 'pl',
-			'py'    => 'script',
-			'rss'   => 'rss',
-			'sh'    => 'script',
-			'shtml' => 'script',
-			'tcl'   => 'script',
-			'xsp'   => 'script',
-			'vbs'   => 'vbs',
+				// HTML Dynamic pages or script
+				'asp'   => 'script',
+				'aspx'  => 'dotnet',
+				'ashx'  => 'dotnet',
+				'asmx'  => 'dotnet',
+				'axd'   => 'dotnet',
+				'cfm'   => 'script',
+				'class' => 'script',
+				'js'    => 'jscript',
+				'jsp'   => 'script',
+				'cgi'   => 'script',
+				'ksh'   => 'script',
+				'php'   => 'php',
+				'php3'  => 'php',
+				'php4'  => 'php',
+				'pl'    => 'pl',
+				'py'    => 'script',
+				'rss'   => 'rss',
+				'sh'    => 'script',
+				'shtml' => 'script',
+				'tcl'   => 'script',
+				'xsp'   => 'script',
+				'vbs'   => 'vbs',
 
-			// Image
-			'gif'   => 'image',
-			'png'   => 'image',
-			'bmp'   => 'image',
-			'jpg'   => 'image',
-			'jpeg'  => 'image',
-			'cdr'   => 'image',
-			'ico'   => 'image',
-			'svg'   => 'image',
+				// Image
+				'gif'   => 'image',
+				'png'   => 'image',
+				'bmp'   => 'image',
+				'jpg'   => 'image',
+				'jpeg'  => 'image',
+				'cdr'   => 'image',
+				'ico'   => 'image',
+				'svg'   => 'image',
 
-			// Document
-			'ai'    => 'document',
-			'doc'   => 'document',
-			'wmz'   => 'document',
-			'rtf'   => 'document',
-			'mso'   => 'document',
-			'pdf'   => 'pdf',
-			'frl'   => 'pdf',
-			'xls'   => 'document',
-			'ppt'   => 'document',
-			'pps'   => 'document',
-			'psd'   => 'document',
-			'sxw'   => 'ooffice',
-			'sxc'   => 'ooffice',
-			'sxi'   => 'ooffice',
-			'sxd'   => 'ooffice',
-			'sxm'   => 'ooffice',
-			'sxg'   => 'ooffice',
-			'csv'   => 'csv',
-			'xsl'   => 'xsl',
-			'lit'   => 'lit',
-			'mdb'   => 'mdb',
-			'rpt'   => 'crystal',
+				// Document
+				'ai'    => 'document',
+				'doc'   => 'document',
+				'wmz'   => 'document',
+				'rtf'   => 'document',
+				'mso'   => 'document',
+				'pdf'   => 'pdf',
+				'frl'   => 'pdf',
+				'xls'   => 'document',
+				'ppt'   => 'document',
+				'pps'   => 'document',
+				'psd'   => 'document',
+				'sxw'   => 'ooffice',
+				'sxc'   => 'ooffice',
+				'sxi'   => 'ooffice',
+				'sxd'   => 'ooffice',
+				'sxm'   => 'ooffice',
+				'sxg'   => 'ooffice',
+				'csv'   => 'csv',
+				'xsl'   => 'xsl',
+				'lit'   => 'lit',
+				'mdb'   => 'mdb',
+				'rpt'   => 'crystal',
 
-			// Package
-			'rpm'   => 'package',
-			'deb'   => 'package',
-			'msi'   => 'package',
+				// Package
+				'rpm'   => 'package',
+				'deb'   => 'package',
+				'msi'   => 'package',
 
-			// Archive
-			'7z'    => 'archive',
-			'ace'   => 'archive',
-			'bz2'   => 'archive',
-			'cab'   => 'archive',
-			'emz'   => 'archive',
-			'gz'    => 'archive',
-			'jar'   => 'archive',
-			'lzma'  => 'archive',
-			'rar'   => 'archive',
-			'tar'   => 'archive',
-			'tgz'   => 'archive',
-			'tbz2'  => 'archive',
-			'z'     => 'archive',
-			'zip'   => 'archive',
+				// Archive
+				'7z'    => 'archive',
+				'ace'   => 'archive',
+				'bz2'   => 'archive',
+				'cab'   => 'archive',
+				'emz'   => 'archive',
+				'gz'    => 'archive',
+				'jar'   => 'archive',
+				'lzma'  => 'archive',
+				'rar'   => 'archive',
+				'tar'   => 'archive',
+				'tgz'   => 'archive',
+				'tbz2'  => 'archive',
+				'z'     => 'archive',
+				'zip'   => 'archive',
 
-			// Audio
-			'aac'   => 'audio',
-			'flac'  => 'audio',
-			'mp3'   => 'audio',
-			'oga'   => 'audio',
-			'ogg'   => 'audio',
-			'wav'   => 'audio',
-			'wma'   => 'audio',
-			'm4a'   => 'audio',
-			'm3u'   => 'audio',
-			'asf'   => 'audio',
+				// Audio
+				'aac'   => 'audio',
+				'flac'  => 'audio',
+				'mp3'   => 'audio',
+				'oga'   => 'audio',
+				'ogg'   => 'audio',
+				'wav'   => 'audio',
+				'wma'   => 'audio',
+				'm4a'   => 'audio',
+				'm3u'   => 'audio',
+				'asf'   => 'audio',
 
-			// Video
-			'avi'   => 'video',
-			'divx'  => 'video',
-			'mp4'   => 'video',
-			'm4v'   => 'video',
-			'mpeg'  => 'video',
-			'mpg'   => 'video',
-			'ogv'   => 'video',
-			'ogx'   => 'video',
-			'rm'    => 'video',
-			'swf'   => 'flash',
-			'flv'   => 'flash',
-			'f4v'   => 'flash',
-			'wmv'   => 'video',
-			'wmf'   => 'video',
-			'mov'   => 'video',
-			'qt'    => 'video',
+				// Video
+				'avi'   => 'video',
+				'divx'  => 'video',
+				'mp4'   => 'video',
+				'm4v'   => 'video',
+				'mpeg'  => 'video',
+				'mpg'   => 'video',
+				'ogv'   => 'video',
+				'ogx'   => 'video',
+				'rm'    => 'video',
+				'swf'   => 'flash',
+				'flv'   => 'flash',
+				'f4v'   => 'flash',
+				'wmv'   => 'video',
+				'wmf'   => 'video',
+				'mov'   => 'video',
+				'qt'    => 'video',
 
-			// Config
-			'cf'    => 'conf',
-			'conf'  => 'conf',
-			'css'   => 'css',
-			'ini'   => 'conf',
-			'dtd'   => 'dtd',
+				// Config
+				'cf'    => 'conf',
+				'conf'  => 'conf',
+				'css'   => 'css',
+				'ini'   => 'conf',
+				'dtd'   => 'dtd',
 
-			// Program
-			'exe'   => 'runtime',
-			'jnlp'  => 'jnlp',
-			'dll'   => 'library',
-			'bin'   => 'library',
+				// Program
+				'exe'   => 'runtime',
+				'jnlp'  => 'jnlp',
+				'dll'   => 'library',
+				'bin'   => 'library',
 
-			// Font
-			'ttf'   => 'ttf',
-			'fon'   => 'fon',
+				// Font
+				'ttf'   => 'ttf',
+				'fon'   => 'fon',
 
-			// Encrypted files
-			'pgp'   => 'encrypt',
-			'gpg'   => 'encrypt',
-		];
+				// Encrypted files
+				'pgp'   => 'encrypt',
+				'gpg'   => 'encrypt',
+			];
 
 		$clock =
-		[
-			0  => 'hr1',
-		    1  => 'hr2',
-		    2  => 'hr3',
-		    3  => 'hr4',
-		    4  => 'hr5',
-		    5  => 'hr6',
-		    6  => 'hr7',
-		    7  => 'hr8',
-		    8  => 'hr9',
-		    9  => 'hr10',
-		    10 => 'hr11',
-		    11 => 'hr12',
-		    12 => 'hr1',
-		    13 => 'hr2',
-		    14 => 'hr3',
-		    15 => 'hr4',
-		    16 => 'hr5',
-		    17 => 'hr6',
-		    18 => 'hr7',
-		    19 => 'hr8',
-		    20 => 'hr9',
-		    21 => 'hr10',
-		    22 => 'hr11',
-		    23 => 'hr12'
-		];
+			[
+				0  => 'hr1',
+				1  => 'hr2',
+				2  => 'hr3',
+				3  => 'hr4',
+				4  => 'hr5',
+				5  => 'hr6',
+				6  => 'hr7',
+				7  => 'hr8',
+				8  => 'hr9',
+				9  => 'hr10',
+				10 => 'hr11',
+				11 => 'hr12',
+				12 => 'hr1',
+				13 => 'hr2',
+				14 => 'hr3',
+				15 => 'hr4',
+				16 => 'hr5',
+				17 => 'hr6',
+				18 => 'hr7',
+				19 => 'hr8',
+				20 => 'hr9',
+				21 => 'hr10',
+				22 => 'hr11',
+				23 => 'hr12'
+			];
 
 		$Domains =
-		[
-			'localhost' => 'localhost',
-			'i0'        => 'Local network host',
-			'a2'        => 'Satellite access host',
+			[
+				'localhost' => 'localhost',
+				'i0'        => 'Local network host',
+				'a2'        => 'Satellite access host',
 
-			'ac'        => 'Ascension Island',
-			'ad'        => 'Andorra',
-			'ae'        => 'United Arab Emirates',
-			'aero'      => 'Aero/Travel domains',
-			'af'        => 'Afghanistan',
-			'ag'        => 'Antigua and Barbuda',
-			'ai'        => 'Anguilla',
-			'al'        => 'Albania',
-			'am'        => 'Armenia',
-			'an'        => 'Netherlands Antilles',
-			'ao'        => 'Angola',
-			'aq'        => 'Antarctica',
-			'ar'        => 'Argentina',
-			'arpa'      => 'Old style Arpanet',
-			'as'        => 'American Samoa',
-			'at'        => 'Austria',
-			'au'        => 'Australia',
-			'aw'        => 'Aruba',
-			'ax'        => 'Aland islands',
-			'az'        => 'Azerbaidjan',
-			'ba'        => 'Bosnia-Herzegovina',
-			'bb'        => 'Barbados',
-			'bd'        => 'Bangladesh',
-			'be'        => 'Belgium',
-			'bf'        => 'Burkina Faso',
-			'bg'        => 'Bulgaria',
-			'bh'        => 'Bahrain',
-			'bi'        => 'Burundi',
-			'biz'       => 'Biz domains',
-			'bj'        => 'Benin',
-			'bm'        => 'Bermuda',
-			'bn'        => 'Brunei Darussalam',
-			'bo'        => 'Bolivia',
-			'br'        => 'Brazil',
-			'bs'        => 'Bahamas',
-			'bt'        => 'Bhutan',
-			'bv'        => 'Bouvet Island',
-			'bw'        => 'Botswana',
-			'by'        => 'Belarus',
-			'bz'        => 'Belize',
-			'ca'        => 'Canada',
-			'cc'        => 'Cocos (Keeling) Islands',
-			'cd'        => 'Congo, Democratic Republic of the',
-			'cf'        => 'Central African Republic',
-			'cg'        => 'Congo',
-			'ch'        => 'Switzerland',
-			'ci'        => 'Ivory Coast (Cote D\'Ivoire)',
-			'ck'        => 'Cook Islands',
-			'cl'        => 'Chile',
-			'cm'        => 'Cameroon',
-			'cn'        => 'China',
-			'co'        => 'Colombia',
-			'com'       => 'Commercial',
-			'coop'      => 'Coop domains',
-			'cr'        => 'Costa Rica',
-			'cs'        => 'Former Czechoslovakia',
-			'cu'        => 'Cuba',
-			'cv'        => 'Cape Verde',
-			'cw'        => 'Curacao',
-			'cx'        => 'Christmas Island',
-			'cy'        => 'Cyprus',
-			'cz'        => 'Czech Republic',
-			'de'        => 'Germany',
-			'dj'        => 'Djibouti',
-			'dk'        => 'Denmark',
-			'dm'        => 'Dominica',
-			'do'        => 'Dominican Republic',
-			'dz'        => 'Algeria',
-			'ec'        => 'Ecuador',
-			'edu'       => 'USA Educational',
-			'ee'        => 'Estonia',
-			'eg'        => 'Egypt',
-			'eh'        => 'Western Sahara',
-			'er'        => 'Eritrea',
-			'es'        => 'Spain',
-			'et'        => 'Ethiopia',
-			'eu'        => 'European country',
-			'fi'        => 'Finland',
-			'fj'        => 'Fiji',
-			'fk'        => 'Falkland Islands',
-			'fm'        => 'Micronesia',
-			'fo'        => 'Faroe Islands',
-			'fr'        => 'France',
-			'fx'        => 'France (European Territory)',
-			'ga'        => 'Gabon',
-			'gb'        => 'Great Britain',
-			'gd'        => 'Grenada',
-			'ge'        => 'Georgia',
-			'gf'        => 'French Guyana',
-			'gg'        => 'Guernsey',
-			'gh'        => 'Ghana',
-			'gi'        => 'Gibraltar',
-			'gl'        => 'Greenland',
-			'gm'        => 'Gambia',
-			'gn'        => 'Guinea',
-			'gov'       => 'USA Government',
-			'gp'        => 'Guadeloupe (French)',
-			'gq'        => 'Equatorial Guinea',
-			'gr'        => 'Greece',
-			'gs'        => 'S. Georgia &amp; S. Sandwich Isls.',
-			'gt'        => 'Guatemala',
-			'gu'        => 'Guam (USA)',
-			'gw'        => 'Guinea Bissau',
-			'gy'        => 'Guyana',
-			'hk'        => 'Hong Kong',
-			'hm'        => 'Heard and McDonald Islands',
-			'hn'        => 'Honduras',
-			'hr'        => 'Croatia',
-			'ht'        => 'Haiti',
-			'hu'        => 'Hungary',
-			'id'        => 'Indonesia',
-			'ie'        => 'Ireland',
-			'il'        => 'Israel',
-			'im'        => 'Isle of Man',
-			'in'        => 'India',
-			'info'      => 'Info domains',
-			'int'       => 'International',
-			'io'        => 'British Indian Ocean Territory',
-			'iq'        => 'Iraq',
-			'ir'        => 'Iran',
-			'is'        => 'Iceland',
-			'it'        => 'Italy',
-			'je'        => 'Jersey',
-			'jm'        => 'Jamaica',
-			'jo'        => 'Jordan',
-			'jobs'      => 'Jobs domains',
-			'jp'        => 'Japan',
-			'ke'        => 'Kenya',
-			'kg'        => 'Kyrgyzstan',
-			'kh'        => 'Cambodia',
-			'ki'        => 'Kiribati',
-			'km'        => 'Comoros',
-			'kn'        => 'Saint Kitts &amp; Nevis Anguilla',
-			'kp'        => 'North Korea',
-			'kr'        => 'South Korea',
-			'kw'        => 'Kuwait',
-			'ky'        => 'Cayman Islands',
-			'kz'        => 'Kazakhstan',
-			'la'        => 'Laos',
-			'lb'        => 'Lebanon',
-			'lc'        => 'Saint Lucia',
-			'li'        => 'Liechtenstein',
-			'lk'        => 'Sri Lanka',
-			'lr'        => 'Liberia',
-			'ls'        => 'Lesotho',
-			'lt'        => 'Lithuania',
-			'lu'        => 'Luxembourg',
-			'lv'        => 'Latvia',
-			'ly'        => 'Libya',
-			'ma'        => 'Morocco',
-			'mc'        => 'Monaco',
-			'md'        => 'Moldova',
-			'me'        => 'Montenegro',
-			'mg'        => 'Madagascar',
-			'mh'        => 'Marshall Islands',
-			'mil'       => 'USA Military',
-			'mk'        => 'Macedonia',
-			'ml'        => 'Mali',
-			'mm'        => 'Myanmar',
-			'mn'        => 'Mongolia',
-			'mo'        => 'Macau',
-			'mobi'      => 'Mobi domains',
-			'mp'        => 'Northern Mariana Islands',
-			'mq'        => 'Martinique (French)',
-			'mr'        => 'Mauritania',
-			'ms'        => 'Montserrat',
-			'mt'        => 'Malta',
-			'mu'        => 'Mauritius',
-			'museum'    => 'Museum domains',
-			'mv'        => 'Maldives',
-			'mw'        => 'Malawi',
-			'mx'        => 'Mexico',
-			'my'        => 'Malaysia',
-			'mz'        => 'Mozambique',
-			'na'        => 'Namibia',
-			'name'      => 'Name domains',
-			'nato'      => 'NATO',
-			'nc'        => 'New Caledonia (French)',
-			'ne'        => 'Niger',
-			'net'       => 'Network',
-			'nf'        => 'Norfolk Island',
-			'ng'        => 'Nigeria',
-			'ni'        => 'Nicaragua',
-			'nl'        => 'Netherlands',
-			'no'        => 'Norway',
-			'np'        => 'Nepal',
-			'nr'        => 'Nauru',
-			'nt'        => 'Neutral Zone',
-			'nu'        => 'Niue',
-			'nz'        => 'New Zealand',
-			'om'        => 'Oman',
-			'org'       => 'Non-Profit Organizations',
-			'pa'        => 'Panama',
-			'pe'        => 'Peru',
-			'pf'        => 'Polynesia (French)',
-			'pg'        => 'Papua New Guinea',
-			'ph'        => 'Philippines',
-			'pk'        => 'Pakistan',
-			'pl'        => 'Poland',
-			'pm'        => 'Saint Pierre and Miquelon',
-			'pn'        => 'Pitcairn Island',
-			'pr'        => 'Puerto Rico',
-			'pro'       => 'Professional domains',
-			'ps'        => 'Palestinian Territories',
-			'pt'        => 'Portugal',
-			'pw'        => 'Palau',
-			'py'        => 'Paraguay',
-			'qa'        => 'Qatar',
-			're'        => 'Reunion (French)',
-			'ro'        => 'Romania',
-			'rs'        => 'Republic of Serbia',
-			'ru'        => 'Russian Federation',
-			'rw'        => 'Rwanda',
-			'sa'        => 'Saudi Arabia',
-			'sb'        => 'Solomon Islands',
-			'sc'        => 'Seychelles',
-			'sd'        => 'Sudan',
-			'se'        => 'Sweden',
-			'sg'        => 'Singapore',
-			'sh'        => 'Saint Helena',
-			'si'        => 'Slovenia',
-			'sj'        => 'Svalbard and Jan Mayen Islands',
-			'sk'        => 'Slovak Republic',
-			'sl'        => 'Sierra Leone',
-			'sm'        => 'San Marino',
-			'sn'        => 'Senegal',
-			'so'        => 'Somalia',
-			'sr'        => 'Suriname',
-			'st'        => 'Sao Tome and Principe',
-			'su'        => 'Former USSR',
-			'sv'        => 'El Salvador',
-			'sx'        => 'Sint Maarten',
-			'sy'        => 'Syria',
-			'sz'        => 'Swaziland',
-			'tc'        => 'Turks and Caicos Islands',
-			'td'        => 'Chad',
-			'tf'        => 'French Southern Territories',
-			'tg'        => 'Togo',
-			'th'        => 'Thailand',
-			'tj'        => 'Tadjikistan',
-			'tk'        => 'Tokelau',
-			'tm'        => 'Turkmenistan',
-			'tn'        => 'Tunisia',
-			'to'        => 'Tonga',
-			'tp'        => 'East Timor',
-			'tr'        => 'Turkey',
-			'tt'        => 'Trinidad and Tobago',
-			'tv'        => 'Tuvalu',
-			'tw'        => 'Taiwan',
-			'tz'        => 'Tanzania',
-			'ua'        => 'Ukraine',
-			'ug'        => 'Uganda',
-			'uk'        => 'United Kingdom',
-			'um'        => 'USA Minor Outlying Islands',
-			'us'        => 'United States',
-			'uy'        => 'Uruguay',
-			'uz'        => 'Uzbekistan',
-			'va'        => 'Vatican City State',
-			'vc'        => 'Saint Vincent &amp; Grenadines',
-			've'        => 'Venezuela',
-			'vg'        => 'Virgin Islands (British)',
-			'vi'        => 'Virgin Islands (USA)',
-			'vn'        => 'Vietnam',
-			'vu'        => 'Vanuatu',
-			'wf'        => 'Wallis and Futuna Islands',
-			'ws'        => 'Samoa Islands',
-			'ye'        => 'Yemen',
-			'yt'        => 'Mayotte',
-			'yu'        => 'Yugoslavia',
-			'za'        => 'South Africa',
-			'zm'        => 'Zambia',
-			'zr'        => 'Zaire',
-			'zw'        => 'Zimbabwe'
-		];
+				'ac'        => 'Ascension Island',
+				'ad'        => 'Andorra',
+				'ae'        => 'United Arab Emirates',
+				'aero'      => 'Aero/Travel domains',
+				'af'        => 'Afghanistan',
+				'ag'        => 'Antigua and Barbuda',
+				'ai'        => 'Anguilla',
+				'al'        => 'Albania',
+				'am'        => 'Armenia',
+				'an'        => 'Netherlands Antilles',
+				'ao'        => 'Angola',
+				'aq'        => 'Antarctica',
+				'ar'        => 'Argentina',
+				'arpa'      => 'Old style Arpanet',
+				'as'        => 'American Samoa',
+				'at'        => 'Austria',
+				'au'        => 'Australia',
+				'aw'        => 'Aruba',
+				'ax'        => 'Aland islands',
+				'az'        => 'Azerbaidjan',
+				'ba'        => 'Bosnia-Herzegovina',
+				'bb'        => 'Barbados',
+				'bd'        => 'Bangladesh',
+				'be'        => 'Belgium',
+				'bf'        => 'Burkina Faso',
+				'bg'        => 'Bulgaria',
+				'bh'        => 'Bahrain',
+				'bi'        => 'Burundi',
+				'biz'       => 'Biz domains',
+				'bj'        => 'Benin',
+				'bm'        => 'Bermuda',
+				'bn'        => 'Brunei Darussalam',
+				'bo'        => 'Bolivia',
+				'br'        => 'Brazil',
+				'bs'        => 'Bahamas',
+				'bt'        => 'Bhutan',
+				'bv'        => 'Bouvet Island',
+				'bw'        => 'Botswana',
+				'by'        => 'Belarus',
+				'bz'        => 'Belize',
+				'ca'        => 'Canada',
+				'cc'        => 'Cocos (Keeling) Islands',
+				'cd'        => 'Congo, Democratic Republic of the',
+				'cf'        => 'Central African Republic',
+				'cg'        => 'Congo',
+				'ch'        => 'Switzerland',
+				'ci'        => 'Ivory Coast (Cote D\'Ivoire)',
+				'ck'        => 'Cook Islands',
+				'cl'        => 'Chile',
+				'cm'        => 'Cameroon',
+				'cn'        => 'China',
+				'co'        => 'Colombia',
+				'com'       => 'Commercial',
+				'coop'      => 'Coop domains',
+				'cr'        => 'Costa Rica',
+				'cs'        => 'Former Czechoslovakia',
+				'cu'        => 'Cuba',
+				'cv'        => 'Cape Verde',
+				'cw'        => 'Curacao',
+				'cx'        => 'Christmas Island',
+				'cy'        => 'Cyprus',
+				'cz'        => 'Czech Republic',
+				'de'        => 'Germany',
+				'dj'        => 'Djibouti',
+				'dk'        => 'Denmark',
+				'dm'        => 'Dominica',
+				'do'        => 'Dominican Republic',
+				'dz'        => 'Algeria',
+				'ec'        => 'Ecuador',
+				'edu'       => 'USA Educational',
+				'ee'        => 'Estonia',
+				'eg'        => 'Egypt',
+				'eh'        => 'Western Sahara',
+				'er'        => 'Eritrea',
+				'es'        => 'Spain',
+				'et'        => 'Ethiopia',
+				'eu'        => 'European country',
+				'fi'        => 'Finland',
+				'fj'        => 'Fiji',
+				'fk'        => 'Falkland Islands',
+				'fm'        => 'Micronesia',
+				'fo'        => 'Faroe Islands',
+				'fr'        => 'France',
+				'fx'        => 'France (European Territory)',
+				'ga'        => 'Gabon',
+				'gb'        => 'Great Britain',
+				'gd'        => 'Grenada',
+				'ge'        => 'Georgia',
+				'gf'        => 'French Guyana',
+				'gg'        => 'Guernsey',
+				'gh'        => 'Ghana',
+				'gi'        => 'Gibraltar',
+				'gl'        => 'Greenland',
+				'gm'        => 'Gambia',
+				'gn'        => 'Guinea',
+				'gov'       => 'USA Government',
+				'gp'        => 'Guadeloupe (French)',
+				'gq'        => 'Equatorial Guinea',
+				'gr'        => 'Greece',
+				'gs'        => 'S. Georgia &amp; S. Sandwich Isls.',
+				'gt'        => 'Guatemala',
+				'gu'        => 'Guam (USA)',
+				'gw'        => 'Guinea Bissau',
+				'gy'        => 'Guyana',
+				'hk'        => 'Hong Kong',
+				'hm'        => 'Heard and McDonald Islands',
+				'hn'        => 'Honduras',
+				'hr'        => 'Croatia',
+				'ht'        => 'Haiti',
+				'hu'        => 'Hungary',
+				'id'        => 'Indonesia',
+				'ie'        => 'Ireland',
+				'il'        => 'Israel',
+				'im'        => 'Isle of Man',
+				'in'        => 'India',
+				'info'      => 'Info domains',
+				'int'       => 'International',
+				'io'        => 'British Indian Ocean Territory',
+				'iq'        => 'Iraq',
+				'ir'        => 'Iran',
+				'is'        => 'Iceland',
+				'it'        => 'Italy',
+				'je'        => 'Jersey',
+				'jm'        => 'Jamaica',
+				'jo'        => 'Jordan',
+				'jobs'      => 'Jobs domains',
+				'jp'        => 'Japan',
+				'ke'        => 'Kenya',
+				'kg'        => 'Kyrgyzstan',
+				'kh'        => 'Cambodia',
+				'ki'        => 'Kiribati',
+				'km'        => 'Comoros',
+				'kn'        => 'Saint Kitts &amp; Nevis Anguilla',
+				'kp'        => 'North Korea',
+				'kr'        => 'South Korea',
+				'kw'        => 'Kuwait',
+				'ky'        => 'Cayman Islands',
+				'kz'        => 'Kazakhstan',
+				'la'        => 'Laos',
+				'lb'        => 'Lebanon',
+				'lc'        => 'Saint Lucia',
+				'li'        => 'Liechtenstein',
+				'lk'        => 'Sri Lanka',
+				'lr'        => 'Liberia',
+				'ls'        => 'Lesotho',
+				'lt'        => 'Lithuania',
+				'lu'        => 'Luxembourg',
+				'lv'        => 'Latvia',
+				'ly'        => 'Libya',
+				'ma'        => 'Morocco',
+				'mc'        => 'Monaco',
+				'md'        => 'Moldova',
+				'me'        => 'Montenegro',
+				'mg'        => 'Madagascar',
+				'mh'        => 'Marshall Islands',
+				'mil'       => 'USA Military',
+				'mk'        => 'Macedonia',
+				'ml'        => 'Mali',
+				'mm'        => 'Myanmar',
+				'mn'        => 'Mongolia',
+				'mo'        => 'Macau',
+				'mobi'      => 'Mobi domains',
+				'mp'        => 'Northern Mariana Islands',
+				'mq'        => 'Martinique (French)',
+				'mr'        => 'Mauritania',
+				'ms'        => 'Montserrat',
+				'mt'        => 'Malta',
+				'mu'        => 'Mauritius',
+				'museum'    => 'Museum domains',
+				'mv'        => 'Maldives',
+				'mw'        => 'Malawi',
+				'mx'        => 'Mexico',
+				'my'        => 'Malaysia',
+				'mz'        => 'Mozambique',
+				'na'        => 'Namibia',
+				'name'      => 'Name domains',
+				'nato'      => 'NATO',
+				'nc'        => 'New Caledonia (French)',
+				'ne'        => 'Niger',
+				'net'       => 'Network',
+				'nf'        => 'Norfolk Island',
+				'ng'        => 'Nigeria',
+				'ni'        => 'Nicaragua',
+				'nl'        => 'Netherlands',
+				'no'        => 'Norway',
+				'np'        => 'Nepal',
+				'nr'        => 'Nauru',
+				'nt'        => 'Neutral Zone',
+				'nu'        => 'Niue',
+				'nz'        => 'New Zealand',
+				'om'        => 'Oman',
+				'org'       => 'Non-Profit Organizations',
+				'pa'        => 'Panama',
+				'pe'        => 'Peru',
+				'pf'        => 'Polynesia (French)',
+				'pg'        => 'Papua New Guinea',
+				'ph'        => 'Philippines',
+				'pk'        => 'Pakistan',
+				'pl'        => 'Poland',
+				'pm'        => 'Saint Pierre and Miquelon',
+				'pn'        => 'Pitcairn Island',
+				'pr'        => 'Puerto Rico',
+				'pro'       => 'Professional domains',
+				'ps'        => 'Palestinian Territories',
+				'pt'        => 'Portugal',
+				'pw'        => 'Palau',
+				'py'        => 'Paraguay',
+				'qa'        => 'Qatar',
+				're'        => 'Reunion (French)',
+				'ro'        => 'Romania',
+				'rs'        => 'Republic of Serbia',
+				'ru'        => 'Russian Federation',
+				'rw'        => 'Rwanda',
+				'sa'        => 'Saudi Arabia',
+				'sb'        => 'Solomon Islands',
+				'sc'        => 'Seychelles',
+				'sd'        => 'Sudan',
+				'se'        => 'Sweden',
+				'sg'        => 'Singapore',
+				'sh'        => 'Saint Helena',
+				'si'        => 'Slovenia',
+				'sj'        => 'Svalbard and Jan Mayen Islands',
+				'sk'        => 'Slovak Republic',
+				'sl'        => 'Sierra Leone',
+				'sm'        => 'San Marino',
+				'sn'        => 'Senegal',
+				'so'        => 'Somalia',
+				'sr'        => 'Suriname',
+				'st'        => 'Sao Tome and Principe',
+				'su'        => 'Former USSR',
+				'sv'        => 'El Salvador',
+				'sx'        => 'Sint Maarten',
+				'sy'        => 'Syria',
+				'sz'        => 'Swaziland',
+				'tc'        => 'Turks and Caicos Islands',
+				'td'        => 'Chad',
+				'tf'        => 'French Southern Territories',
+				'tg'        => 'Togo',
+				'th'        => 'Thailand',
+				'tj'        => 'Tadjikistan',
+				'tk'        => 'Tokelau',
+				'tm'        => 'Turkmenistan',
+				'tn'        => 'Tunisia',
+				'to'        => 'Tonga',
+				'tp'        => 'East Timor',
+				'tr'        => 'Turkey',
+				'tt'        => 'Trinidad and Tobago',
+				'tv'        => 'Tuvalu',
+				'tw'        => 'Taiwan',
+				'tz'        => 'Tanzania',
+				'ua'        => 'Ukraine',
+				'ug'        => 'Uganda',
+				'uk'        => 'United Kingdom',
+				'um'        => 'USA Minor Outlying Islands',
+				'us'        => 'United States',
+				'uy'        => 'Uruguay',
+				'uz'        => 'Uzbekistan',
+				'va'        => 'Vatican City State',
+				'vc'        => 'Saint Vincent &amp; Grenadines',
+				've'        => 'Venezuela',
+				'vg'        => 'Virgin Islands (British)',
+				'vi'        => 'Virgin Islands (USA)',
+				'vn'        => 'Vietnam',
+				'vu'        => 'Vanuatu',
+				'wf'        => 'Wallis and Futuna Islands',
+				'ws'        => 'Samoa Islands',
+				'ye'        => 'Yemen',
+				'yt'        => 'Mayotte',
+				'yu'        => 'Yugoslavia',
+				'za'        => 'South Africa',
+				'zm'        => 'Zambia',
+				'zr'        => 'Zaire',
+				'zw'        => 'Zimbabwe'
+			];
 
 		return array_merge(
 			['Browsers'                 => $Browsers],

@@ -130,7 +130,7 @@ $data = Stats::Read($file);
 
 // Instantiation Example
 $data = App::make('stats');
-$data->Read('012015.myhost.com');
+$data->Read('awstats012015.myhost.com');
 ```
 
 **Retrieve Current month stats**
@@ -146,7 +146,7 @@ $data = Stats::Current()
 
 ```php
 // Retrieve General Section Data
-$general = $data->General();
+$general = Stats::General($file);
 ```
 
 **Outputs**
@@ -180,7 +180,7 @@ $general = $data->General();
 
 ```php
 // Retrieve Misc Section Data
-$misc = $data->Misc();
+$misc = Stats::Misc($file);
 ```
 
 **Outputs**
@@ -206,7 +206,7 @@ $misc = $data->Misc();
 
 ```php
 // Retrieve Time Section Data
-$time = $data->Time();
+$time = Stats::Time($file);
 ```
 
 **Outputs**
@@ -226,7 +226,7 @@ $time = $data->Time();
 
 ```php
 // Retrieve Domain Section Data
-$domain = $data->Domain();
+$domain = Stats::Domain($file);
 ```
 
 **Outputs**
@@ -244,7 +244,7 @@ $domain = $data->Domain();
 ```php
 // Retrieve Cluster Section Data
 // Visit AWstats documentation page for instructions on how to configure and enalble this section
-$cluster = $data->Cluster();
+$cluster = Stats::Cluster($file);
 ```
 
 **Outputs**
@@ -260,7 +260,7 @@ $cluster = $data->Cluster();
 
 ```php
 // Retrieve Login Section Data
-$login = $data->Login();
+$login = Stats::Login($file);
 ```
 
 **Outputs**
@@ -277,7 +277,7 @@ $login = $data->Login();
 
 ```php
 // Retrieve Robot Section Data
-$robot = $data->Robot();
+$robot = Stats::Robot($file);
 ```
 
 **Outputs**
@@ -294,7 +294,7 @@ $robot = $data->Robot();
 
 ```php
 // Retrieve Worms Section Data
-$worm = $data->Worm();
+$worm = Stats::Worm($file);
 ```
 
 **Outputs**
@@ -311,7 +311,7 @@ $worm = $data->Worm();
 ```php
 // Retrieve Email Sender Section Data
 // Visit AWstats documentation page for instructions on how to configure and enalble this section
-$emailsender = $data->Emailsender();
+$emailsender = Stats::Emailsender($file);
 ```
 
 **Outputs**
@@ -328,7 +328,7 @@ $emailsender = $data->Emailsender();
 ```php
 // Retrieve Email Receiver Section Data
 // Visit AWstats documentation page for instructions on how to configure and enalble this section
-$emailreceiver = $data->Emailreceiver();
+$emailreceiver = Stats::Emailreceiver($file);
 ```
 
 **Outputs**
@@ -344,7 +344,7 @@ $emailreceiver = $data->Emailreceiver();
 
 ```php
 // Retrieve File Types Section Data
-$file_types = $data->Filetype();
+$file_types = Stats::Filetype($file);
 ```
 
 **Outputs**
@@ -362,7 +362,7 @@ $file_types = $data->Filetype();
 
 ```php
 // Retrieve Downloads Section Data
-$downloads = $data->Download();
+$downloads = Stats::Download($file);
 ```
 
 **Outputs**
@@ -377,7 +377,7 @@ $downloads = $data->Download();
 
 ```php
 // Retrieve Os Section Data
-$os = $data->Os();
+$os = Stats::Os($file);
 ```
 
 **Outputs**
@@ -392,7 +392,7 @@ $os = $data->Os();
 
 ```php
 // Retrieve Browsers Section Data
-$browsers = $data->Browser();
+$browsers = Stats::Browser($file);
 ```
 
 **Outputs**
@@ -409,7 +409,7 @@ $browsers = $data->Browser();
 ```php
 // Retrieve Screen Size Section Data
 // Visit AWstats documentation page for instructions on how to configure and enalble this section
-$screensize = $data->ScreenSize();
+$screensize = Stats::ScreenSize($file);
 ```
 
 **Outputs**
@@ -423,7 +423,7 @@ $screensize = $data->ScreenSize();
 
 ```php
 // Retrieve Unknown Referer Section Data
-$unknown_referer = $data->UnknownReferer();
+$unknown_referer = Stats::UnknownReferer($file);
 ```
 
 **Outputs**
@@ -437,7 +437,7 @@ $unknown_referer = $data->UnknownReferer();
 
 ```php
 // Retrieve Unknown Referer Browser Section Data
-$unknown_referer_browser = $data->UnknownRefererBrowser();
+$unknown_referer_browser = Stats::UnknownRefererBrowser($file);
 ```
 
 **Outputs**
@@ -451,7 +451,7 @@ $unknown_referer_browser = $data->UnknownRefererBrowser();
 
 ```php
 // Retrieve Origin Section Data
-$origin = $data->Origin();
+$origin = Stats::Origin($file);
 ```
 
 **Outputs**
@@ -472,7 +472,7 @@ $origin = $data->Origin();
 
 ```php
 // Retrieve Search Engine Referrals Section Data
-$sereferrals = $data->Sereferrals();
+$sereferrals = Stats::Sereferrals($file);
 ```
 
 **Outputs**
@@ -487,7 +487,7 @@ $sereferrals = $data->Sereferrals();
 
 ```php
 // Retrieve External Page Referers Section Data
-$external_page_referers = $data->Pagerefs();
+$external_page_referers = Stats::Pagerefs($file);
 ```
 
 **Outputs**
@@ -502,7 +502,7 @@ $external_page_referers = $data->Pagerefs();
 
 ```php
 // Retrieve Search Keyphrases Section Data
-$search_keyphrases = $data->Searchwords();
+$search_keyphrases = Stats::Searchwords($file);
 ```
 
 **Outputs**
@@ -516,7 +516,7 @@ $search_keyphrases = $data->Searchwords();
 
 ```php
 // Retrieve Search Keywords Section Data
-$search_keywords = $data->Keywords();
+$search_keywords = Stats::Keywords($file);
 ```
 
 **Outputs**
@@ -530,7 +530,7 @@ $search_keywords = $data->Keywords();
 
 ```php
 // Retrieve Errors Section Data
-$errors = $data->Errors();
+$errors = Stats::Errors($file);
 ```
 
 **Outputs**
@@ -545,7 +545,7 @@ $errors = $data->Errors();
 
 ```php
 // Retrieve 404 Errors Section Data
-$page_not_found_errors = $data->Sider404();
+$page_not_found_errors = Stats::Sider404($file);
 ```
 
 **Outputs**
@@ -560,7 +560,7 @@ $page_not_found_errors = $data->Sider404();
 
 ```php
 // Retrieve Visitor Section Data
-$visitors = $data->Visitor();
+$visitors = Stats::Visitor($file);
 ```
 
 **Outputs**
@@ -579,7 +579,7 @@ $visitors = $data->Visitor();
 
 ```php
 // Retrieve Day Section Data
-$days = $data->Day();
+$days = Stats::Day($file);
 ```
 
 **Outputs**
@@ -596,7 +596,7 @@ $days = $data->Day();
 
 ```php
 // Retrieve Session Section Data
-$sessions = $data->Session();
+$sessions = Stats::Session($file);
 ```
 
 **Outputs**
@@ -610,7 +610,7 @@ $sessions = $data->Session();
 
 ```php
 // Retrieve Sider Section Data
-$internal_links = $data->Sider();
+$internal_links = Stats::Sider($file);
 ```
 
 **Outputs**
@@ -627,7 +627,7 @@ $internal_links = $data->Sider();
 
 ```php
 // Retrieve Best day of month (by hits)
-$best_day = $data->Bestday();
+$best_day = Stats::Bestday($file);
 ```
 
 **Outputs**

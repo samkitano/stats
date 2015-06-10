@@ -426,14 +426,11 @@ class AWstats extends Stats
 
 
 
-
 	/**
-	 * Class constructor
-	 *
 	 * @param $file
 	 *
+	 * @throws FileException
 	 * @throws FileNotFoundException
-	 * @throws NotReadableException
 	 */
 	public function __construct($file)
 	{
@@ -451,9 +448,7 @@ class AWstats extends Stats
 	/**
 	 * Class destructor
 	 */
-	public function __destruct() {
-		clear_object($this);
-	}
+	public function __destruct() {}
 
 	/**
 	 * Read Selected AWstats File
