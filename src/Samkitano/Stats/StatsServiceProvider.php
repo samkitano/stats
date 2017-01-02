@@ -18,7 +18,7 @@ class StatsServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('samkitano/stats');
+		//$this->package('samkitano/stats');
 	}
 
 	/**
