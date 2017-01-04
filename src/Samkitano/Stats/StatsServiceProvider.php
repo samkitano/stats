@@ -1,6 +1,7 @@
 <?php namespace Samkitano\Stats;
 
 use Illuminate\Support\ServiceProvider;
+use Samkitano\Stats\Facades\Stats;
 
 class StatsServiceProvider extends ServiceProvider {
 
@@ -18,7 +19,7 @@ class StatsServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('samkitano/stats');
+
 	}
 
 	/**
@@ -28,26 +29,19 @@ class StatsServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app['stats'] = $this->app->share(function($app)
-			{
-				return new Stats;
-			});
+        $this->app->singleton('stats',function()
+        {
+            return new \Samkitano\Stats\Stats();
+        });
 
-		$this->app->booting(function()
-			{
-				$loader = \Illuminate\Foundation\AliasLoader::getInstance();
-				$loader->alias('Stats', 'Samkitano\Stats\Facades\Stats');
-			});
+        $this->registerAliases();
 	}
 
-	/**
-	 * Get the services provided by the provider.
-	 *
-	 * @return array
-	 */
-	public function provides()
-	{
-		return array('stats');
-	}
+
+	protected function registerAliases()
+    {
+        $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+        $loader->alias('Stats', Stats::class);
+    }
 
 }
